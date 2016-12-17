@@ -1,0 +1,29 @@
+//
+//  PrefixHeader.pch
+//  colorConvertToRGB
+//
+//  Created by allenjzl on 2016/12/17.
+//  Copyright © 2016年 allenjzl. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+//#pragma mark - 16进制色值转RGB
+#define UIColorFromRGBHex(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+//所有背景色
+#define Cf0f0f0 UIColorFromRGBHex(0xf0f0f0)
+//分割线颜色
+#define Ce0e0e0 UIColorFromRGBHex(0xe0e0e0)
+//淡红颜色
+#define Cff8361 UIColorFromRGBHex(0xff8361)
+//黑色
+#define C333333 UIColorFromRGBHex(0x333333)
+//浅灰色
+#define C999999 UIColorFromRGBHex(0x999999)
+//深灰色
+#define C666666 UIColorFromRGBHex(0x666666)
+
+#endif /* PrefixHeader_pch */
